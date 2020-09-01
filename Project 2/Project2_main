@@ -1,0 +1,54 @@
+import java.util.StringTokenizer;
+
+class Project2{
+	
+	public static void main(String args[]) {
+		
+		TextFileInput file = new TextFileInput("input.txt");
+		
+		SortedClockList S = new SortedClockList();
+		
+		UnsortedClockList U = new UnsortedClockList();
+		
+		String line = file.readLine();
+		
+		while(line != null) {
+			
+			/*
+			 * while the file has a next line that has 3 values, store the file values in
+			 * a placeholder then add into their respective Lists
+			 */
+			
+			StringTokenizer tokens = new StringTokenizer(line,","); 
+			
+			int numofTokens = tokens.countTokens();
+			if(numofTokens < 3) {
+				break;
+			}
+			
+			int placeholder1;
+			int placeholder2;
+			int placeholder3;
+				
+			placeholder1 = Integer.parseInt(tokens.nextToken());	
+			placeholder2 = Integer.parseInt(tokens.nextToken());
+			placeholder3 = Integer.parseInt(tokens.nextToken());
+			
+			
+			U.add(new Clock(placeholder1, placeholder2, placeholder3));
+			
+			S.add(new Clock(placeholder1, placeholder2, placeholder3));
+			
+			
+			
+			
+			line = file.readLine();
+			
+			
+		}
+		ClockGUI GUI = new ClockGUI(S, U);
+		
+		
+	}
+	
+}

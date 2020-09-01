@@ -1,0 +1,32 @@
+class SortedClockList extends ClockList {
+	
+	SortedClockList() {
+		super();
+	}
+	
+	public void add(Clock c) {
+		ClockNode newnode = new ClockNode(c);
+		ClockNode curr = first.next;
+		ClockNode prevNode = first;
+		
+		/*
+		 * while the current node is not empty check if
+		 * curr.next is larger than curr 
+		 */
+		
+		while (curr != null) {
+			if(curr.data.getHours() > newnode.data.getHours()) {
+				curr = curr.next;
+				prevNode = prevNode.next;
+			} else {
+				newnode.next = curr;
+				prevNode.next = newnode;
+				length++;
+				return;
+			}
+		}
+		append(c);
+		
+	}
+
+}

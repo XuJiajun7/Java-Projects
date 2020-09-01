@@ -1,0 +1,13 @@
+class UnsortedClockList extends ClockList {
+	/*
+	 * calling the super class and appending the candle to 
+	 * the end of the list
+	 */
+	UnsortedClockList() {
+		super();
+	}
+	
+	public void add(Clock c) {
+		append(c);
+	}
+}

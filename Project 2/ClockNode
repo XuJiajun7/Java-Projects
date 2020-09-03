@@ -1,0 +1,11 @@
+public class ClockNode
+{
+   protected Clock data;
+   protected ClockNode next;
+
+   public ClockNode(Clock d)
+   {
+      data = d;
+      next = null;
+   }  // constructor
+}  // class ShortNode

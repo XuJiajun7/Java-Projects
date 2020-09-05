@@ -1,0 +1,55 @@
+public class Clock {
+	private int hours;
+	private int minutes;
+	private int seconds;
+	
+	/**
+ 	 * Constructs and initailizes the clock object 
+  	 *
+ 	 * @param  h h hours
+ 	 * @param  m m minutes
+ 	 * @param  s s seconds
+ 	 */
+	
+	public Clock(int h, int m, int s) {
+		super();
+		this.hours = h;
+		this.minutes = m;
+		this.seconds = s;	
+	}
+	
+    	/**
+ 	 * Getters and setters for the hours, minutes, and seconds on the clock
+ 	 * getters return each of their respective time values
+  	 * setters initializing values to be used
+ 	 */
+ 	 
+	public int getHours() {
+		return hours;
+	}
+
+	public void setHours(int hours) {
+		this.hours = hours;
+	}
+
+	public int getMinutes() {
+		return minutes;
+	}
+
+	public void setMinutes(int minutes) {
+		this.minutes = minutes;
+	}
+
+	public float getSeconds() {
+		return seconds;
+	}
+
+	public void setSeconds(int seconds) {
+		this.seconds = seconds;
+	}
+
+	public String toString(Clock c) {
+		return hours + ":" + minutes + ":" + seconds;	
+	}
+	
+}

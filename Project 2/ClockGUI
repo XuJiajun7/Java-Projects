@@ -1,0 +1,34 @@
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
+import java.awt.GridLayout;
+
+class ClockGUI extends JFrame{
+	
+	ClockList us, ss;
+	JTextArea textarea1, textarea2;
+	
+    public ClockGUI(SortedClockList s, UnsortedClockList u) {
+       us = u;
+       ss = s;
+       setTitle("ClockGUI");
+       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       setSize(400,400);
+       addLists();
+       setVisible(true);
+       
+    }
+    
+    public void addLists() {
+       
+       setLayout(new GridLayout(1,2));
+       
+       textarea1 = new JTextArea();
+       textarea1.append(us.toString());
+       add(textarea1);
+       
+       textarea2 = new JTextArea();
+       textarea2.append(ss.toString());
+       add(textarea2);
+       
+    }
+}

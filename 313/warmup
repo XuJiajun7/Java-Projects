@@ -10,3 +10,9 @@ class Main {
     String firstname;
     String lastname;
     String IDNo;
+    
+    public Student(String firstname, String lastname, String IDNo){
+      this.firstname = firstname;
+      this.lastname = lastname;
+      this.IDNo = IDNo;
+    }

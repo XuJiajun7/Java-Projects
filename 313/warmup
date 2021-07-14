@@ -16,3 +16,8 @@ class Main {
       this.lastname = lastname;
       this.IDNo = IDNo;
     }
+    //setters
+    public void setFirstname(String fn){
+      firstname = fn;
+    }
+    
